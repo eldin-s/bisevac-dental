@@ -1,0 +1,145 @@
+.header-hero-slider {
+  width: 120rem;
+  height: 47.5rem;
+  position: relative;
+  transition: background-image 2s ease;
+}
+
+.header-hero-slide {
+  background: linear-gradient(
+      90deg,
+      rgba(52, 52, 52, 0.1) 0%,
+      rgba(15, 15, 15, 0.2) 100%
+    ),
+    url('http://localhost:3000/assets/bisevac-slider1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+}
+
+.header-hero-slide2 {
+  background: linear-gradient(
+      90deg,
+      rgba(52, 52, 52, 0.1) 0%,
+      rgba(15, 15, 15, 0.2) 100%
+    ),
+    url('http://localhost:3000/assets/bisevac-slider2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  transition: background-image 2s ease;
+}
+
+.slider-information-left {
+  min-width: 50%;
+}
+
+.slider-information-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slide-subheading {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: center;
+
+  background-color: var(--color-global);
+  width: 190px;
+
+  padding: 6px;
+  margin: 1rem 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.animateToRight0s {
+  animation: slideToRight 1s ease-in-out 0s 1 normal;
+}
+
+.animateToRight05s {
+  animation: slideToRight 1.5s ease-in-out 0.5s 1 normal forwards;
+}
+
+.animateToRight15s {
+  animation: swingForward 1s ease-in-out 1.5s 1 normal forwards;
+}
+
+.animateToRight2s {
+  animation: opacityAnim 1s ease-in-out 2s 1 normal forwards;
+}
+
+.slide-heading {
+  font-size: 4rem;
+  color: var(--color-secondary);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  transform: translateX(-100%);
+}
+
+.slide-text {
+  color: var(--color-blackish);
+  font-size: 1.3rem;
+
+  margin: 1rem 0 1.8rem 0;
+  opacity: 0;
+}
+
+.slide-info {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.slide-info-text {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 3rem;
+  letter-spacing: 0.5px;
+}
+
+.light {
+  color: var(--color-light-bg);
+}
+
+/* DOTS */
+
+.slider-dots {
+  display: flex;
+
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-light-bg);
+  margin: 5px;
+  border-radius: 50%;
+  border: 5px solid var(--color-secondary);
+
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+Global Color: #4f87fb
+Secondary Color: #130947
+
+Blackish Color: #28303f
+Light Background Color: #f1f6fb
+Blackish Background Color: #28303f
+
+Font Color: #6d7a8c
+
+Line Heigh: 1.5
+
+H1 font size: 34px, color: #130947, line-heigh: 44px, letter-spacing: -0.5px
+
+H2 font size: 30px, color: #130947, line-heigh: 40px, letter-spacing: -0.5px
+
+Link Color:
+#130947
+
+Link Hover Color:
+#4f87fb
+
+Logo Max Height: 60
+Sticky Logo Max Heigh: 35
+Responsive Logo Max Height: 50
