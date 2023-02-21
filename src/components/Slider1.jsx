@@ -42,6 +42,14 @@ export const Slider1 = () => {
               : 'hide'
           }
         >
+          <img
+            src={
+              process.env.PUBLIC_URL + `/assets/bisevac-slider${idx + 1}.jpg`
+            }
+            className="slider-img animateOpacity"
+            alt="Bisevac-Dental-Studio"
+          />
+
           <div className="slider-information-left"></div>
           <div className="slider-information-right">
             <h5 className="slide-subheading animateToRight0s">
