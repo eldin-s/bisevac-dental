@@ -20,9 +20,22 @@ export const ServicesSlideshow = () => {
 
       <div className="homepage-services-slideshow-container">
         <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
           modules={[Pagination]}
-          spaceBetween={10}
-          slidesPerView={3}
+          spaceBetween={0}
+          slidesPerView={1}
           speed={1000}
           pagination={{ clickable: true }}
         >

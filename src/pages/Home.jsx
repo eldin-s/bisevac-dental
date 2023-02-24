@@ -84,7 +84,7 @@ export const Home = () => {
             <div className="homepage-about-image-pattern">
               <img
                 src={process.env.PUBLIC_URL + `/assets/lines-pattarn.png`}
-                alt="Semir Bisevac"
+                alt="background-pattern"
               />
             </div>
           </div>

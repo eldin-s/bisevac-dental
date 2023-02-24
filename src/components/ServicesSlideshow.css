@@ -8,26 +8,24 @@
     ),
     url('http://localhost:3000/assets/pattern-1.png');
   background-repeat: repeat;
+  padding: 4rem 0;
 }
 
 .homepage-services-slideshow-container {
   max-width: 75rem;
   margin: 0 auto;
 
-  height: 40rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  column-gap: 2rem;
+  padding: 0 1rem;
 }
 
 .homepage-services-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75rem;
+  width: 100%;
   margin: 0 auto;
+
+  overflow: hidden;
 
   padding: 3rem 15rem 4rem;
 
@@ -105,4 +103,22 @@
 .swiper-pagination-bullet {
   width: 0.8rem !important;
   height: 0.8rem !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .service-element-card {
+    width: 30rem !important ;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .homepage-services-heading {
+    padding: 3rem 10rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .homepage-services-heading {
+    padding: 2.5rem 2rem 3rem;
+  }
 }
