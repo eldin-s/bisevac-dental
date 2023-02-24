@@ -1,108 +1,103 @@
 import React, { useState } from 'react';
 
 export const Slider = () => {
-  // const slides = [
-  //   {
-  //     subheading: 'Online Rešenje',
-  //   },
-  // ];
+  const slides = [
+    {
+      id: 1,
+      subheading: 'Online Rešenje',
+      heading: 'Posvećeni pouzdanoj stomatološkoj nezi',
+      text: 'Brinemo o rastućim potrebama naše zajednice',
+      button: 'Kontakt',
+      info: 'Dobijte besplatan pregled',
+    },
 
-  const [slide, setSlide] = useState(true);
+    {
+      id: 2,
+      subheading: 'PROFESIONALNO OSOBLJE',
+      heading: `Vaš osmeh je \n Naš priorotet`,
+      text: 'Personalizovane i visoko-kvalitetne usluge',
+      button: 'Kontakt',
+      info: '',
+    },
+  ];
 
-  const setSlideTo0 = () => {
-    setSlide(true);
-  };
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const setSlideTo1 = () => {
-    setSlide(false);
+    setCurrentIndex(1);
+  };
+
+  const setSlideTo2 = () => {
+    setCurrentIndex(2);
   };
 
   return (
     <div className="header-hero-slider">
-      {slide ? (
-        <div className="header-hero-slide">
-          <div className="slider-information-left"></div>
+      {slides.map((slide, idx) => (
+        <div
+          key={idx}
+          className={
+            currentIndex === idx + 1
+              ? `header-hero-slide${currentIndex}`
+              : 'hide'
+          }
+        >
+          <i>
+            <img
+              src={
+                process.env.PUBLIC_URL + `/assets/bisevac-slider${idx + 1}.jpg`
+              }
+              className="slider-img animateOpacity"
+              alt="Bisevac-Dental-Studio"
+            />
+          </i>
 
+          <div className="slider-information-left"></div>
           <div className="slider-information-right">
-            <h5
+            <h5 className="slide-subheading animateToRight0s">
+              {slides[currentIndex - 1].subheading}
+            </h5>
+
+            <h1
               className={
-                slide ? 'slide-subheading animateToRight0s' : 'slide-subheading'
+                currentIndex === 2
+                  ? 'slide-heading animateToRight05s light'
+                  : 'slide-heading animateToRight05s'
               }
             >
-              Online Rešenje
-            </h5>
-            <h1
-              className={`slide-heading ${
-                slide ? 'slide-heading animateToRight05s' : 'slide-heading'
-              }`}
-            >
-              Posvećeni pouzdanoj stomatološkoj nezi
+              {slides[currentIndex - 1].heading}
             </h1>
             <p
-              className={`${
-                slide ? 'slide-text animateToRight15s' : 'slide-text'
-              }`}
+              className={
+                currentIndex === 2
+                  ? 'slide-text animateToRight15s light'
+                  : 'slide-text animateToRight15s'
+              }
             >
-              Brinemo o rastućim potrebama naše zajednice
+              {slides[currentIndex - 1].text}
             </p>
-
-            <div
-              className={`${
-                slide ? 'slide-info animateToRight2s' : 'slide-info'
-              }`}
-            >
-              <button className="btn btn-kontakt">Kontakt</button>
-              <p className="slide-info-text">Dobijte besplatan pregled</p>
+            <div className="slide-info animateToRight2s">
+              <button className="btn btn-kontakt">
+                {slides[currentIndex - 1].button}
+              </button>
+              <p className="slide-info-text">{slides[currentIndex - 1].info}</p>
             </div>
           </div>
         </div>
-      ) : (
-        <div className="header-hero-slide2">
-          <div className="slider-information-left"></div>
-
-          <div className="slider-information-right">
-            <h5
-              className={`${
-                slide
-                  ? 'slide-subheading slide2'
-                  : 'slide-subheading slide2 animateToRight0s'
-              }`}
-            >
-              Profesionalno Osoblje
-            </h5>
-            <h1
-              className={` ${
-                slide
-                  ? 'slide-heading light'
-                  : 'slide-heading light animateToRight05s'
-              }`}
-            >
-              Vaš osmeh je <br /> Naš priorotet
-            </h1>
-            <p
-              className={`${
-                slide
-                  ? 'slide-text light'
-                  : 'slide-text light animateToRight15s'
-              }`}
-            >
-              Personalizovane i visoko-kvalitetne usluge
-            </p>
-
-            <div
-              className={`${
-                slide ? 'slide-info' : 'slide-info animateToRight2s'
-              }`}
-            >
-              <button className="btn btn-kontakt">Kontakt</button>
-            </div>
-          </div>
-        </div>
-      )}
-
+      ))}
       <div className="slider-dots">
-        <div className="slider-dot" onClick={setSlideTo0}></div>
-        <div className="slider-dot" onClick={setSlideTo1}></div>
+        <div
+          className={
+            currentIndex === 1 ? 'slider-dot dot-active' : 'slider-dot'
+          }
+          onClick={setSlideTo1}
+        ></div>
+        <div
+          className={
+            currentIndex === 2 ? 'slider-dot dot-active' : 'slider-dot'
+          }
+          onClick={setSlideTo2}
+        ></div>
       </div>
     </div>
   );
