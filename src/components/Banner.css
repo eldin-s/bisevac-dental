@@ -1,0 +1,150 @@
+.homepage-banner-container {
+  width: 100%;
+  background: var(--color-global);
+}
+
+.homepage-banner-container-inner {
+  max-width: 75rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background: url('http://localhost:3000/assets/dotted-map.png');
+
+  padding: 2rem 2rem;
+}
+
+.banner-video {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+}
+
+.button-icon {
+  color: #f3f3f3;
+  font-size: 4rem;
+}
+
+.banner-video-info {
+  font-size: 14px;
+  color: #f3f3f3;
+}
+
+.banner-circles-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow-x: hidden;
+
+  width: 100%;
+
+  padding: 0 2.7rem;
+}
+
+.banner-circle-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.circle-description {
+  font-size: 14px;
+  color: #fff;
+}
+
+.circle-wrap {
+  /* margin: 150px auto; */
+  width: 150px;
+  height: 150px;
+  background: var(--color-blackish);
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #d2eaf1;
+  line-height: 135px;
+  text-align: center;
+  margin-top: 9px;
+  margin-left: 9px;
+  color: var(--color-global);
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.6em;
+}
+
+/* color animation */
+
+/* 3rd progress bar */
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #fff;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(150deg);
+}
+
+.mask.full.anim65,
+.circle.anim65 .fill.anim65 {
+  animation: anim65 ease-in-out 3s;
+  transform: rotate(80deg);
+}
+
+.mask.full.anim90,
+.circle.anim90 .fill.anim90 {
+  animation: fill ease-in-out 3s;
+  transform: rotate(168deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(150deg);
+  }
+}
+
+@keyframes anim65 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+
+@keyframes anim90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(168deg);
+  }
+}

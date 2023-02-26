@@ -7,6 +7,7 @@ import { TiDocumentText } from 'react-icons/ti';
 
 import './home.css';
 import { ServicesSlideshow } from '../components/ServicesSlideshow';
+import { Banner } from '../components/Banner';
 
 export const Home = () => {
   return (
@@ -91,6 +92,7 @@ export const Home = () => {
         </div>
       </div>
       <ServicesSlideshow />
+      <Banner />
     </div>
   );
 };
