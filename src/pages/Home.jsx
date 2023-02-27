@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Slider1 } from '../components/Slider1';
 import { Slider } from '../components/Slider';
 import { FiPhoneCall } from 'react-icons/fi';
 import { Ri24HoursLine } from 'react-icons/ri';
@@ -8,6 +7,7 @@ import { TiDocumentText } from 'react-icons/ti';
 import './home.css';
 import { ServicesSlideshow } from '../components/ServicesSlideshow';
 import { Banner } from '../components/Banner';
+import { Tabs } from '../components/Tabs/Tabs';
 
 export const Home = () => {
   return (
@@ -93,6 +93,7 @@ export const Home = () => {
       </div>
       <ServicesSlideshow />
       <Banner />
+      <Tabs />
     </div>
   );
 };

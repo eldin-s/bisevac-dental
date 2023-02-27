@@ -1,0 +1,151 @@
+.homepage-tabs-container {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  padding: 2rem;
+}
+
+ul.tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.tabs-nav li {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  color: var(--color-font);
+  font-weight: 500;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-bottom: 0.5px solid #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+ul.tabs-nav li.active {
+  box-shadow: inset 0px -2px 0px 0px var(--color-global);
+  color: var(--color-blackish);
+}
+
+.tab-contet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-content-inner {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+
+  gap: 2rem;
+}
+
+.tab-content-image img {
+  width: 31.25rem;
+  height: 22rem;
+  border-radius: 1rem;
+}
+
+.tab-content-description h2 {
+  color: var(--color-secondary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  padding-bottom: 2rem;
+}
+
+.tab-content-description p {
+  padding-bottom: 2rem;
+  color: var(--color-font);
+}
+
+.tab-content-description ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tab-content-description li {
+  color: var(--color-font);
+  list-style-type: none;
+}
+
+.tab-content-description li span {
+  color: var(--color-global);
+  padding-right: 0.5rem;
+}
+
+.fadeInAnim {
+  animation: fadeIn 0.2s ease-out 0s 1 normal forwards;
+}
+
+.fadeOutAnim {
+  animation: fadeOut 0.2s ease-out 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  ul.tabs-nav li {
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  ul.tabs-nav li {
+    max-width: 100%;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .tab-content-image img {
+    width: 28rem;
+    height: 19.5rem;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  ul.tabs-nav li {
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .tab-content-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+
+    gap: 2rem;
+  }
+
+  ul.tabs-nav {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .tab-content-image img {
+    max-width: 30rem;
+    height: 19.5rem;
+    border-radius: 1rem;
+  }
+}

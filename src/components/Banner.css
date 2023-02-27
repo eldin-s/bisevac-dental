@@ -81,14 +81,14 @@
 }
 
 .circle-wrap .inside-circle {
-  width: 130px;
-  height: 130px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   background: #d2eaf1;
   line-height: 135px;
   text-align: center;
-  margin-top: 9px;
-  margin-left: 9px;
+  margin-top: 6.8px;
+  margin-left: 6.8px;
   color: var(--color-global);
   position: absolute;
   z-index: 100;
@@ -146,5 +146,19 @@
   }
   100% {
     transform: rotate(168deg);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .homepage-banner-container-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner-circles-container {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
