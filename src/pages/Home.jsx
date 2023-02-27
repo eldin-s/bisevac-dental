@@ -8,6 +8,7 @@ import './home.css';
 import { ServicesSlideshow } from '../components/ServicesSlideshow';
 import { Banner } from '../components/Banner';
 import { Tabs } from '../components/Tabs/Tabs';
+import { TeamMember } from '../components/TeamMember';
 
 export const Home = () => {
   return (
@@ -94,6 +95,7 @@ export const Home = () => {
       <ServicesSlideshow />
       <Banner />
       <Tabs />
+      <TeamMember />
     </div>
   );
 };

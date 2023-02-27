@@ -1,0 +1,118 @@
+.team-member {
+  width: 100%;
+
+  background: linear-gradient(
+      90deg,
+      rgba(79, 135, 251, 0.1) 0%,
+      rgba(79, 135, 251, 0.2) 100%
+    ),
+    url('http://localhost:3000/assets/pattern-1.png');
+  background-repeat: repeat;
+
+  height: 40rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member-inner {
+  max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member-inner h3 {
+  margin-top: 2rem;
+  padding: 2rem;
+  max-width: 60rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-font);
+}
+
+.team-member-card {
+  background-color: #fff;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 0.5rem;
+}
+
+.team-member-img {
+  background-image: url('http://localhost:3000/assets/Semra-Sabaredzovic.jpeg');
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 0px 9px rgba(79, 136, 251, 0.1);
+  transition: box-shadow ease-in-out 0.3s;
+}
+
+.team-member-card:hover .team-member-img {
+  box-shadow: 0px 0px 0px 9px var(--color-global);
+}
+
+.team-member h4 {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  padding-top: 2rem;
+  cursor: pointer;
+  transition: color ease 0.3s;
+}
+
+.team-member h4:hover {
+  color: var(--color-global);
+}
+
+.team-member p {
+  color: var(--color-font);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+
+  padding-top: 0.5rem;
+}
+
+.team-member-social {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.team-member-social i {
+  text-align: center;
+  padding: 0.5rem;
+  color: #fff;
+  line-height: 22px;
+  font-size: 0.9rem;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: var(--color-global);
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.team-member-social i:hover {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 600px) {
+  .team-member-inner h3 {
+    font-size: 1rem;
+  }
+}
