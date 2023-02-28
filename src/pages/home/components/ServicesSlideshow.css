@@ -58,7 +58,7 @@
 .element-card-img img {
   width: 100%;
   height: auto;
-  transition: all 0.3s;
+  transition: scale 0.3s;
 }
 
 .element-card-img img:hover {

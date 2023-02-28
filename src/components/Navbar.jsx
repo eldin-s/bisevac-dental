@@ -36,7 +36,9 @@ export const Navbar = () => {
 
               <ul className="dropdown">
                 <li className="nav-second-lvl">
-                  Estetska Stomatologija
+                  <Link to="/estetska-stomatologija">
+                    Estetska Stomatologija
+                  </Link>
                   <ul className="dropdown-second-lvl">
                     <li className="nav-third-lvl">
                       <Link to="/">Ortodoncija</Link>
@@ -47,10 +49,16 @@ export const Navbar = () => {
                   </ul>
                 </li>
 
-                <li className="nav-second-lvl">Parodontologija</li>
-                <li className="nav-second-lvl">Oralna Hirurgija</li>
-                <li className="nav-second-lvl">Dečija Stomatologija</li>
-                <li className="nav-second-lvl">Opšta Stomatologija</li>
+                <li className="nav-second-lvl">
+                  <Link to="/paradontologija"> Parodontologija</Link>
+                </li>
+                <li className="nav-second-lvl">
+                  <Link to="oralna-hirurgija">Oralna Hirurgija</Link>
+                </li>
+                <li className="nav-second-lvl">
+                  <Link to="decija-stomatologija">Dečija Stomatologija</Link>
+                </li>
+                <li className="nav-second-lvl"> Opšta Stomatologija</li>
               </ul>
             </li>
             <li className="nav-first-lvl">

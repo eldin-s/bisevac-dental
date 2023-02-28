@@ -163,12 +163,16 @@
 
   cursor: pointer;
 
-  transition: all 0.5s ease;
+  transition: border 0.5s ease, background 0.5s ease, scale 0.5s ease;
 }
 
 .dot-active {
   border: 5px solid var(--color-light-bg);
   background-color: #000;
+}
+
+.slider-dot:hover {
+  scale: 1.2;
 }
 
 .hide {
