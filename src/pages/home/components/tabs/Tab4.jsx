@@ -1,21 +1,21 @@
 import React from 'react';
-import bg3 from '../../assets/bg3.jpg';
+import bg4 from '../../../../assets/bg4.jpg';
 import './Tabs.css';
 
-export const Tab3 = () => {
+export const Tab4 = () => {
   return (
     <div className="tab-content-inner fadeInAnim">
       <div className="tab-content-image">
-        <img src={bg3} alt="bisevac-dental-bg3" />
+        <img src={bg4} alt="bisevac-dental-b4" />
       </div>
       <div className="tab-content-description">
-        <h2>Zubobolja</h2>
+        <h2>Strah od stomatologa</h2>
         <p>
-          Zubobolja, dentalgija, odontalgija je bol koji potiče od zuba ili
-          tkiva koji ga okružuju. Percepcija bola je relativno konstantna dok je
-          reakcija na bol veoma individualna, različita od osobe do osobe. Bilo
-          kako bilo, bol je simptom izvesnih dešavanja u organizmu i ne treba ga
-          ignorisati.
+          Dentalna anksioznost je česta pojava u opštoj populaciji. To nije
+          dijagnostičko stanje, niti izaziva bilo kakve veće smetnje u
+          svakodnevnom životu. Umjesto toga, može prouzrokovati da osoba doživi
+          fizičke ili psihološke simptome koje se mogu povezati sa posjetom
+          stomatologu, što može dovesti do izbegavanje zubara.
         </p>
 
         <ul>

@@ -1,14 +1,15 @@
 import React from 'react';
-import { Slider } from '../components/Slider';
+import { Slider } from './components/Slider';
+import { ServicesSlideshow } from './components/ServicesSlideshow';
+import { Banner } from './components/Banner';
+import { Tabs } from './components/tabs/Tabs';
+import { TeamMember } from './components/TeamMember';
+
 import { FiPhoneCall } from 'react-icons/fi';
 import { Ri24HoursLine } from 'react-icons/ri';
 import { TiDocumentText } from 'react-icons/ti';
 
 import './home.css';
-import { ServicesSlideshow } from '../components/ServicesSlideshow';
-import { Banner } from '../components/Banner';
-import { Tabs } from '../components/Tabs/Tabs';
-import { TeamMember } from '../components/TeamMember';
 
 export const Home = () => {
   return (

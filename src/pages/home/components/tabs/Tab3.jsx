@@ -1,20 +1,21 @@
 import React from 'react';
-import bg1 from '../../assets/bg1.jpg';
+import bg3 from '../../../../assets/bg3.jpg';
 import './Tabs.css';
 
-export const Tab1 = () => {
+export const Tab3 = () => {
   return (
     <div className="tab-content-inner fadeInAnim">
       <div className="tab-content-image">
-        <img src={bg1} alt="bisevac-dental-bg1" />
+        <img src={bg3} alt="bisevac-dental-bg3" />
       </div>
       <div className="tab-content-description">
-        <h2>Zdravstveno stanje zubi</h2>
+        <h2>Zubobolja</h2>
         <p>
-          Stomatološki pregled je, uz redovito održavanje oralne higijene,
-          osnova dentalnog zdravlja – zdravlja zubi, zubnog mesa (desni), usne
-          šupljine i čeljusti. Zdravi zubi pružaju lijep osmijeh, ugodan dah i
-          samopouzdanje
+          Zubobolja, dentalgija, odontalgija je bol koji potiče od zuba ili
+          tkiva koji ga okružuju. Percepcija bola je relativno konstantna dok je
+          reakcija na bol veoma individualna, različita od osobe do osobe. Bilo
+          kako bilo, bol je simptom izvesnih dešavanja u organizmu i ne treba ga
+          ignorisati.
         </p>
 
         <ul>

@@ -1,21 +1,20 @@
 import React from 'react';
-import bg4 from '../../assets/bg4.jpg';
+import bg1 from '../../../../assets/bg1.jpg';
 import './Tabs.css';
 
-export const Tab4 = () => {
+export const Tab1 = () => {
   return (
     <div className="tab-content-inner fadeInAnim">
       <div className="tab-content-image">
-        <img src={bg4} alt="bisevac-dental-b4" />
+        <img src={bg1} alt="bisevac-dental-bg1" />
       </div>
       <div className="tab-content-description">
-        <h2>Strah od stomatologa</h2>
+        <h2>Zdravstveno stanje zubi</h2>
         <p>
-          Dentalna anksioznost je česta pojava u opštoj populaciji. To nije
-          dijagnostičko stanje, niti izaziva bilo kakve veće smetnje u
-          svakodnevnom životu. Umjesto toga, može prouzrokovati da osoba doživi
-          fizičke ili psihološke simptome koje se mogu povezati sa posjetom
-          stomatologu, što može dovesti do izbegavanje zubara.
+          Stomatološki pregled je, uz redovito održavanje oralne higijene,
+          osnova dentalnog zdravlja – zdravlja zubi, zubnog mesa (desni), usne
+          šupljine i čeljusti. Zdravi zubi pružaju lijep osmijeh, ugodan dah i
+          samopouzdanje
         </p>
 
         <ul>

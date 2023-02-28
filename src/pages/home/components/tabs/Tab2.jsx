@@ -1,5 +1,5 @@
 import React from 'react';
-import bg2 from '../../assets/bg2.jpg';
+import bg2 from '../../../../assets/bg2.jpg';
 import './Tabs.css';
 
 export const Tab2 = () => {
