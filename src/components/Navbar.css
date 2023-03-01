@@ -71,6 +71,7 @@
   color: var(--color-secondary);
   font-size: 0.9rem;
   font-weight: 500;
+  transition: color 0.2s linear;
 }
 
 .nav-first-lvl a:hover,
@@ -164,7 +165,6 @@
 /* BUTTON */
 
 .nav-btn {
-  border: 0;
   padding: 1rem 2rem;
   background: transparent;
 
@@ -184,4 +184,119 @@
 .nav-btn:hover {
   background: var(--color-global);
   color: var(--color-light-bg);
+}
+
+/* SMALL SCREENS */
+
+.navigation-elements_smallscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  flex-direction: column;
+  justify-content: center;
+
+  /* transition: all 0.3s; */
+
+  padding-top: 5rem;
+  gap: 1rem;
+}
+
+.nav_smallscreen li a {
+  color: #ddd;
+  padding: 2rem;
+
+  text-decoration: none;
+}
+
+.nav_smallscreen li {
+  list-style: none;
+  padding: 1rem 0;
+
+  border-bottom: 1px solid rgba(221, 221, 221, 0.1);
+
+  position: relative;
+}
+
+.nav_smallscreen {
+  transition: all 0.3s ease;
+}
+
+.dropdown_smallscreen li {
+  border: 0;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.dropdown_smallscreen li:first-child {
+  padding-top: 1.5rem;
+}
+
+.open-menu-icon {
+  color: #000;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.close-menu-icon {
+  font-size: 2rem;
+  color: #ddd;
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.arrow-down {
+  color: #ddd;
+  font-size: 1.5rem;
+  margin-left: 9rem;
+
+  cursor: pointer;
+}
+
+.arrow-down-second-submenu {
+  color: #ddd;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* .arrow-down-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.bg-overlay {
+  width: 19rem;
+  height: 100vh;
+  background-color: var(--color-blackish);
+  transition: all 0.3s linear;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .navigation-elements {
+    display: none;
+  }
+
+  .navigation-elements_smallscreen {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .open-menu-icon {
+    display: block;
+  }
+
+  .nav-btn {
+    display: none;
+  }
 }
