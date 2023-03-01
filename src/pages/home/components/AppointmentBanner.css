@@ -1,0 +1,53 @@
+.appointment-banner {
+  width: 100%;
+  min-height: 10rem;
+
+  background: url('http://localhost:3000/assets/bg-03-min.jpg');
+}
+
+.appointment-banner-inner {
+  max-width: 75rem;
+
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appointment-banner-inner button {
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 0.3rem;
+  margin: 1rem;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.appointment-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointment-content img {
+  width: 8rem;
+  padding: 2rem 2rem;
+}
+
+.appointment-content h3 {
+  color: #fff;
+}
+
+@media screen and (max-width: 550px) {
+  .appointment-banner-inner {
+    flex-direction: column;
+  }
+}

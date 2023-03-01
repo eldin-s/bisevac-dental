@@ -10,6 +10,7 @@ import { Ri24HoursLine } from 'react-icons/ri';
 import { TiDocumentText } from 'react-icons/ti';
 
 import './home.css';
+import { AppointmentBanner } from './components/AppointmentBanner';
 
 export const Home = () => {
   return (
@@ -97,6 +98,7 @@ export const Home = () => {
       <Banner />
       <Tabs />
       <TeamMember />
+      <AppointmentBanner />
     </div>
   );
 };

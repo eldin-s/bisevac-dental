@@ -77,7 +77,7 @@ export const Slider = () => {
               {slides[currentIndex - 1].text}
             </p>
             <div className="slide-info animateToRight2s">
-              <button className="btn btn-kontakt">
+              <button type="button" className="btn btn-kontakt">
                 {slides[currentIndex - 1].button}
               </button>
               <p className="slide-info-text">{slides[currentIndex - 1].info}</p>

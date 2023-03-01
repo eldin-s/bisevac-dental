@@ -86,103 +86,104 @@ export const Navbar = () => {
             Termin
           </button>
         </div>
-
         <RxHamburgerMenu
           className="open-menu-icon"
           onClick={() => setToggleMenu(true)}
         />
 
-        {toggleMenu && (
-          <div className="navigation-elements_smallscreen bg-overlay">
-            <IoMdClose
-              className="close-menu-icon"
-              onClick={() => setToggleMenu(false)}
-            />
-            <ul className="nav_smallscreen">
-              <li className="nav-first-lvl_smallscreen">
-                <Link to="/">Početna</Link>
-              </li>
-              <li className="nav-first-lvl_smallscreen">
-                <Link to="/services">Usluge</Link>
+        <div
+          className={
+            toggleMenu
+              ? 'navigation-elements_smallscreen bg-overlay active'
+              : 'navigation-elements_smallscreen bg-overlay'
+          }
+        >
+          <IoMdClose
+            className="close-menu-icon"
+            onClick={() => setToggleMenu(false)}
+          />
+          <ul className="nav_smallscreen">
+            <li className="nav-first-lvl_smallscreen">
+              <Link to="/">Početna</Link>
+            </li>
+            <li className="nav-first-lvl_smallscreen">
+              <Link to="/services">Usluge</Link>
 
-                <FiChevronDown
-                  className={!toggleSubMenu ? 'arrow-down' : 'arrow-down hide'}
-                  onClick={setSubMenu}
-                />
-                <FiChevronUp
-                  className={toggleSubMenu ? 'arrow-down' : 'arrow-down hide'}
-                  onClick={unsetSubMenu}
-                />
+              <FiChevronDown
+                className={!toggleSubMenu ? 'arrow-down' : 'arrow-down hide'}
+                onClick={setSubMenu}
+              />
+              <FiChevronUp
+                className={toggleSubMenu ? 'arrow-down' : 'arrow-down hide'}
+                onClick={unsetSubMenu}
+              />
 
-                {toggleSubMenu && (
-                  <ul className="dropdown_smallscreen">
-                    <li className="nav-second-lvl_smallscreen">
-                      <Link to="/estetska-stomatologija">
-                        Estetska Stomatologija
-                      </Link>
+              {toggleSubMenu && (
+                <ul className="dropdown_smallscreen">
+                  <li className="nav-second-lvl_smallscreen">
+                    <Link to="/estetska-stomatologija">
+                      Estetska Stomatologija
+                    </Link>
 
-                      <FiChevronDown
-                        className={
-                          !toggleSecondSubMenu
-                            ? 'arrow-down-second-submenu'
-                            : 'arrow-down-second-submenu hide'
-                        }
-                        onClick={() => {
-                          setToggleSecondSubMenu(true);
-                        }}
-                      />
-                      <FiChevronUp
-                        className={
-                          toggleSecondSubMenu
-                            ? 'arrow-down-second-submenu'
-                            : 'arrow-down-second-submenu hide'
-                        }
-                        onClick={() => {
-                          setToggleSecondSubMenu(false);
-                        }}
-                      />
+                    <FiChevronDown
+                      className={
+                        !toggleSecondSubMenu
+                          ? 'arrow-down-second-submenu'
+                          : 'arrow-down-second-submenu hide'
+                      }
+                      onClick={() => {
+                        setToggleSecondSubMenu(true);
+                      }}
+                    />
+                    <FiChevronUp
+                      className={
+                        toggleSecondSubMenu
+                          ? 'arrow-down-second-submenu'
+                          : 'arrow-down-second-submenu hide'
+                      }
+                      onClick={() => {
+                        setToggleSecondSubMenu(false);
+                      }}
+                    />
 
-                      {toggleSecondSubMenu && (
-                        <ul className="dropdown-second-lvl_smallscreen">
-                          <li className="nav-third-lvl_smallscreen">
-                            <Link to="/">Ortodoncija</Link>
-                          </li>
-                          <li className="nav-third-lvl_smallscreen">
-                            <Link to="/">Beljenje zuba</Link>
-                          </li>
-                        </ul>
-                      )}
-                    </li>
+                    {toggleSecondSubMenu && (
+                      <ul className="dropdown-second-lvl_smallscreen">
+                        <li className="nav-third-lvl_smallscreen">
+                          <Link to="/">Ortodoncija</Link>
+                        </li>
+                        <li className="nav-third-lvl_smallscreen">
+                          <Link to="/">Beljenje zuba</Link>
+                        </li>
+                      </ul>
+                    )}
+                  </li>
 
-                    <li className="nav-second-lvl_smallscreen">
-                      <Link to="/paradontologija"> Parodontologija</Link>
-                    </li>
-                    <li className="nav-second-lvl_smallscreen">
-                      <Link to="oralna-hirurgija">Oralna Hirurgija</Link>
-                    </li>
-                    <li className="nav-second-lvl_smallscreen">
-                      <Link to="decija-stomatologija">
-                        Dečija Stomatologija
-                      </Link>
-                    </li>
-                    <li className="nav-second-lvl_smallscreen">
-                      <Link to="/">Opšta Stomatologija</Link>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li className="nav-first-lvl_smallscreen">
-                <Link to="/o-nama">O nama</Link>
-              </li>
-              <li className="nav-first-lvl_smallscreen">
-                <Link to="/kontakt">Kontakt</Link>
-              </li>
-            </ul>
-            <button type="button" className="nav-btn">
-              Termin
-            </button>
-          </div>
-        )}
+                  <li className="nav-second-lvl_smallscreen">
+                    <Link to="/paradontologija"> Parodontologija</Link>
+                  </li>
+                  <li className="nav-second-lvl_smallscreen">
+                    <Link to="oralna-hirurgija">Oralna Hirurgija</Link>
+                  </li>
+                  <li className="nav-second-lvl_smallscreen">
+                    <Link to="decija-stomatologija">Dečija Stomatologija</Link>
+                  </li>
+                  <li className="nav-second-lvl_smallscreen">
+                    <Link to="/">Opšta Stomatologija</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li className="nav-first-lvl_smallscreen">
+              <Link to="/o-nama">O nama</Link>
+            </li>
+            <li className="nav-first-lvl_smallscreen">
+              <Link to="/kontakt">Kontakt</Link>
+            </li>
+          </ul>
+          <button type="button" className="nav-btn">
+            Termin
+          </button>
+        </div>
       </div>
     </div>
   );

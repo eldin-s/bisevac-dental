@@ -13,6 +13,7 @@
   background-color: var(--color-light-bg);
 
   margin: 0 auto;
+  padding: 0 1rem;
 
   display: flex;
   align-items: center;
@@ -272,10 +273,17 @@
 } */
 
 .bg-overlay {
+  visibility: hidden;
+  opacity: 0;
   width: 19rem;
   height: 100vh;
   background-color: var(--color-blackish);
-  transition: all 0.3s linear;
+  transition: all 0.2s ease-in-out;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .hide {
