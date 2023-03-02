@@ -2,7 +2,9 @@
   width: 100%;
   min-height: 10rem;
 
-  background: url('http://localhost:3000/assets/bg-03-min.jpg');
+  background: url('http://192.168.0.41:3000/assets/bg-03-min.jpg');
+  background-position: top center;
+  background-size: cover;
 }
 
 .appointment-banner-inner {
@@ -49,5 +51,6 @@
 @media screen and (max-width: 550px) {
   .appointment-banner-inner {
     flex-direction: column;
+    padding-top: 3rem;
   }
 }

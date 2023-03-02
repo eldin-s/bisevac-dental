@@ -6,10 +6,10 @@
       rgba(79, 135, 251, 0.1) 0%,
       rgba(79, 135, 251, 0.2) 100%
     ),
-    url('http://localhost:3000/assets/pattern-1.png');
+    url('http://192.168.0.41:3000/assets/pattern-1.png');
   background-repeat: repeat;
 
-  height: 40rem;
+  /* height: 40rem; */
 
   display: flex;
   align-items: center;
@@ -36,6 +36,7 @@
 .team-member-card {
   background-color: #fff;
   padding: 3rem;
+  margin-bottom: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -45,7 +46,7 @@
 }
 
 .team-member-img {
-  background-image: url('http://localhost:3000/assets/Semra-Sabaredzovic.jpeg');
+  background-image: url('http://192.168.0.41:3000/assets/Semra-Sabaredzovic.jpeg');
   width: 19rem;
   height: 19rem;
   border-radius: 50%;
