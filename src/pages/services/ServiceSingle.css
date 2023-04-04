@@ -1,0 +1,19 @@
+.service-single-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.service-single-img {
+  padding-bottom: 2rem;
+}
+
+.service-single-img img {
+  border-radius: 5px;
+}
+
+.service-single-description p {
+  padding-bottom: 1rem;
+  color: #4f5966;
+  line-height: 1.5;
+}

@@ -6,13 +6,16 @@ import { IoMdClose } from 'react-icons/io';
 import { FiChevronDown } from 'react-icons/fi';
 import { FiChevronUp } from 'react-icons/fi';
 
+import services from '../pages/home/components/services';
+import servicesCategory from '../pages/services/servicesCategory';
+
 import './Navbar.css';
 
 export const Navbar = () => {
   const [navFixed, setNavFixed] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleSubMenu, setToggleSubMenu] = useState(false);
-  const [toggleSecondSubMenu, setToggleSecondSubMenu] = useState(false);
+  const [toggleSecondSubMenu, setToggleSecondSubMenu] = useState('');
 
   const navFix = () => {
     if (window.scrollY >= 1) {
@@ -49,30 +52,22 @@ export const Navbar = () => {
               <Link to="/services">Usluge</Link>
 
               <ul className="dropdown">
-                <li className="nav-second-lvl">
-                  <Link to="/estetska-stomatologija">
-                    Estetska Stomatologija
-                  </Link>
-                  <ul className="dropdown-second-lvl">
-                    <li className="nav-third-lvl">
-                      <Link to="/">Ortodoncija</Link>
-                    </li>
-                    <li className="nav-third-lvl">
-                      <Link to="/">Beljenje zuba</Link>
-                    </li>
-                  </ul>
-                </li>
-
-                <li className="nav-second-lvl">
-                  <Link to="/paradontologija"> Parodontologija</Link>
-                </li>
-                <li className="nav-second-lvl">
-                  <Link to="oralna-hirurgija">Oralna Hirurgija</Link>
-                </li>
-                <li className="nav-second-lvl">
-                  <Link to="decija-stomatologija">Dečija Stomatologija</Link>
-                </li>
-                <li className="nav-second-lvl"> Opšta Stomatologija</li>
+                {servicesCategory.map((cat, idx) => (
+                  <li className="nav-second-lvl" key={idx}>
+                    <Link to={`services/` + cat.id}>{cat.heading}</Link>
+                    <ul className="dropdown-second-lvl">
+                      {services
+                        .filter((service) => service.category === cat.id)
+                        .map((service, idx) => (
+                          <li className="nav-third-lvl" key={idx}>
+                            <Link to={`${'services'}/${cat.id}/${service.id}`}>
+                              {service.heading}
+                            </Link>
+                          </li>
+                        ))}
+                    </ul>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className="nav-first-lvl">
@@ -120,56 +115,51 @@ export const Navbar = () => {
 
               {toggleSubMenu && (
                 <ul className="dropdown_smallscreen">
-                  <li className="nav-second-lvl_smallscreen">
-                    <Link to="/estetska-stomatologija">
-                      Estetska Stomatologija
-                    </Link>
-
-                    <FiChevronDown
-                      className={
-                        !toggleSecondSubMenu
-                          ? 'arrow-down-second-submenu'
-                          : 'arrow-down-second-submenu hide'
-                      }
-                      onClick={() => {
-                        setToggleSecondSubMenu(true);
-                      }}
-                    />
-                    <FiChevronUp
-                      className={
-                        toggleSecondSubMenu
-                          ? 'arrow-down-second-submenu'
-                          : 'arrow-down-second-submenu hide'
-                      }
-                      onClick={() => {
-                        setToggleSecondSubMenu(false);
-                      }}
-                    />
-
-                    {toggleSecondSubMenu && (
-                      <ul className="dropdown-second-lvl_smallscreen">
-                        <li className="nav-third-lvl_smallscreen">
-                          <Link to="/">Ortodoncija</Link>
-                        </li>
-                        <li className="nav-third-lvl_smallscreen">
-                          <Link to="/">Beljenje zuba</Link>
-                        </li>
-                      </ul>
-                    )}
-                  </li>
-
-                  <li className="nav-second-lvl_smallscreen">
-                    <Link to="/paradontologija"> Parodontologija</Link>
-                  </li>
-                  <li className="nav-second-lvl_smallscreen">
-                    <Link to="oralna-hirurgija">Oralna Hirurgija</Link>
-                  </li>
-                  <li className="nav-second-lvl_smallscreen">
-                    <Link to="decija-stomatologija">Dečija Stomatologija</Link>
-                  </li>
-                  <li className="nav-second-lvl_smallscreen">
-                    <Link to="/">Opšta Stomatologija</Link>
-                  </li>
+                  {servicesCategory.map((cat, idx) => (
+                    <li className="nav-second-lvl_smallscreen" key={idx}>
+                      <div className="flex-container">
+                        <Link to={`services/${cat.id}`}>{cat.heading}</Link>
+                        <FiChevronDown
+                          className={
+                            toggleSecondSubMenu === ''
+                              ? 'arrow-down-second-submenu '
+                              : 'arrow-down-second-submenu hide'
+                          }
+                          onClick={() => {
+                            setToggleSecondSubMenu(idx);
+                          }}
+                        />
+                        <FiChevronUp
+                          className={
+                            toggleSecondSubMenu === idx
+                              ? 'arrow-down-second-submenu'
+                              : 'arrow-down-second-submenu hide'
+                          }
+                          onClick={() => {
+                            setToggleSecondSubMenu('');
+                          }}
+                        />
+                      </div>
+                      {toggleSecondSubMenu === idx && (
+                        <ul className="dropdown-second-lvl_smallscreen">
+                          {services
+                            .filter((service) => service.category === cat.id)
+                            .map((service, idx) => (
+                              <li
+                                className="nav-third-lvl_smallscreen"
+                                key={idx}
+                              >
+                                <Link
+                                  to={`${'services'}/${cat.id}/${service.id}`}
+                                >
+                                  {service.heading}
+                                </Link>
+                              </li>
+                            ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>

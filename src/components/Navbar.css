@@ -198,15 +198,13 @@
   flex-direction: column;
   justify-content: center;
 
-  /* transition: all 0.3s; */
-
   padding-top: 5rem;
   gap: 1rem;
 }
 
 .nav_smallscreen li a {
   color: #ddd;
-  padding: 2rem;
+  padding: 0 1rem;
 
   text-decoration: none;
 }
@@ -235,6 +233,12 @@
   padding-top: 1.5rem;
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .open-menu-icon {
   color: #000;
   font-size: 2rem;
@@ -255,15 +259,18 @@
 .arrow-down {
   color: #ddd;
   font-size: 1.5rem;
-  margin-left: 9rem;
+  margin-left: 10rem;
 
   cursor: pointer;
 }
 
 .arrow-down-second-submenu {
   color: #ddd;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  padding-right: 0.5rem;
+
+  text-align: right;
 }
 
 /* .arrow-down-link {

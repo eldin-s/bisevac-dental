@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
 
-  background: url('http://192.168.0.41:3000/assets/footerbg.jpg'),
-    rgba(40, 48, 63, 0.89);
+  /* background: url('http://192.168.0.41:3000/assets/footerbg.jpg'),
+    rgba(40, 48, 63, 0.89); */
   background-repeat: repeat;
 }
 

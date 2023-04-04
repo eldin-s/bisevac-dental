@@ -44,7 +44,10 @@ export const ServicesSlideshow = () => {
               <div className="service-element-card">
                 <div className="element-card-img-container">
                   <div className="element-card-img">
-                    <img src={service.imageUrl} alt={service.heading} />
+                    <div
+                      className="element-card-img-single"
+                      style={{ backgroundImage: `url(${service.imageUrl})` }}
+                    ></div>
                   </div>
                   <div className="element-card-icon">
                     <img src={service.iconUrl} alt={service.heading} />

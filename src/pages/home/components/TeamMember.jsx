@@ -15,7 +15,14 @@ export const TeamMember = () => {
         </h3>
 
         <div className="team-member-card">
-          <div className="team-member-img"></div>
+          <div
+            className="team-member-img"
+            style={{
+              backgroundImage: `url(${
+                process.env.PUBLIC_URL + 'assets/Semra-Sabaredzovic.jpeg'
+              })`,
+            }}
+          ></div>
           <h4>Semra Šabaredžović</h4>
           <p>Asistent</p>
           <div className="team-member-social">

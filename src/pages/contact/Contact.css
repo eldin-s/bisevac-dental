@@ -1,0 +1,132 @@
+.contact-page-container {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  padding: 1rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 4rem;
+}
+
+.contact-info-column {
+  flex: 1;
+  width: 100%;
+}
+
+.info-column-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  border-bottom: 2px dotted #aaa;
+
+  padding: 2rem 0;
+}
+.info-column-inner:last-child {
+  border: none;
+}
+
+.info-column-inner-icon {
+  font-size: 2.5rem;
+  color: var(--color-global);
+}
+
+.info-column-inner-details p {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 18px;
+  color: #6d7a8c;
+}
+
+.contact-form-column {
+  padding: 3rem 2rem;
+  flex: 1;
+  width: 100%;
+
+  -webkit-box-shadow: 0px 0px 42px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -24px rgba(0, 0, 0, 0.75);
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-fields {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-fields input {
+  width: 100%;
+  padding: 1rem;
+
+  background-color: #ecf1f8;
+  font-size: 13px;
+  color: #000000ad;
+  font-weight: 400;
+
+  border: none;
+}
+
+.form-bottom-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-bottom-fields textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 4px;
+  background-color: #ecf1f8;
+  color: #000000ad;
+  margin: 1rem 0;
+}
+
+.form-bottom-fields input {
+  background-color: var(--color-global);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border-radius: 2px;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  transition: background 0.3s linear;
+}
+
+.form-bottom-fields input:hover {
+  background-color: #28303f;
+}
+
+.contact-map {
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 55em) {
+  .contact-page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .form-fields {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

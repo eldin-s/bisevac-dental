@@ -9,7 +9,14 @@ import { TfiEmail } from 'react-icons/tfi';
 
 export const Footer = () => {
   return (
-    <div className="footer">
+    <div
+      className="footer"
+      style={{
+        backgroundImage: `url(${
+          process.env.PUBLIC_URL + '/assets/footerbg.jpg'
+        })`,
+      }}
+    >
       <div className="pre-footer-container">
         <div className="pre-footer">
           <img src={logoL} alt="Bisevac dental studio" />
