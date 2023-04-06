@@ -21,7 +21,9 @@ export const Footer = () => {
         <div className="pre-footer">
           <img src={logoL} alt="Bisevac dental studio" />
           <h3>Uvek dostupni klijentima</h3>
-          <AiOutlineInstagram className="social-icon" />
+          <Link to="https://www.instagram.com/bisevac.dental.studio/">
+            <AiOutlineInstagram className="social-icon" />
+          </Link>
         </div>
       </div>
 
@@ -77,13 +79,13 @@ export const Footer = () => {
                 <Link to="/">Početna</Link>
               </li>
               <li>
-                <Link to="/">Usluge</Link>
+                <Link to="/services">Usluge</Link>
               </li>
               <li>
-                <Link to="/">O nama</Link>
+                <Link to="/o-nama">O nama</Link>
               </li>
               <li>
-                <Link to="/">Kontakt</Link>
+                <Link to="/kontakt">Kontakt</Link>
               </li>
             </ul>
           </div>

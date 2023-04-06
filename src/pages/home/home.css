@@ -418,3 +418,24 @@
     width: 100%;
   }
 }
+
+.success-container,
+.not-found-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 15rem 0;
+}
+
+.success-container-inner,
+.not-found-container-inner {
+  padding: 4rem 1rem;
+  background-color: var(--color-global);
+  color: var(--color-light-bg);
+  border-radius: 5px;
+}
+
+.not-found-descritpion a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}

@@ -9,6 +9,8 @@ import { AboutUs } from './pages/about-us/AboutUs';
 import { ServiceCategory } from './pages/services/ServiceCategory';
 import { ServiceSingle } from './pages/services/ServiceSingle';
 import { Contact } from './pages/contact/Contact';
+import { SuccessEmail } from './components/SuccessEmail';
+import { NotFoud } from './components/NotFoud';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/services/:id/:id" element={<ServiceSingle />} />
           <Route path="/o-nama" element={<AboutUs />} />
           <Route path="/kontakt" element={<Contact />} />
+          <Route path="/email-uspesan" element={<SuccessEmail />} />
+          <Route path="*" element={<NotFoud />} />
         </Routes>
         <Footer />
       </Router>

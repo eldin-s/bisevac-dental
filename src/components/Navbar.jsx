@@ -41,7 +41,9 @@ export const Navbar = () => {
     <div className={navFixed ? 'navigation sticky' : 'navigation'}>
       <div className="navigation-inner">
         <div className="navigation-logo">
-          <img src={logoD} alt="Bisevac Dental Studio" />
+          <Link to="/">
+            <img src={logoD} alt="Bisevac Dental Studio" />
+          </Link>
         </div>
         <div className="navigation-elements">
           <ul className="nav">
@@ -77,9 +79,11 @@ export const Navbar = () => {
               <Link to="/kontakt">Kontakt</Link>
             </li>
           </ul>
-          <button type="button" className="nav-btn">
-            Termin
-          </button>
+          <Link to="/kontakt">
+            <button type="button" className="nav-btn">
+              Termin
+            </button>
+          </Link>
         </div>
         <RxHamburgerMenu
           className="open-menu-icon"
@@ -99,10 +103,14 @@ export const Navbar = () => {
           />
           <ul className="nav_smallscreen">
             <li className="nav-first-lvl_smallscreen">
-              <Link to="/">Početna</Link>
+              <Link to="/" onClick={() => setToggleMenu(false)}>
+                Početna
+              </Link>
             </li>
             <li className="nav-first-lvl_smallscreen">
-              <Link to="/services">Usluge</Link>
+              <Link to="/services" onClick={() => setToggleMenu(false)}>
+                Usluge
+              </Link>
 
               <FiChevronDown
                 className={!toggleSubMenu ? 'arrow-down' : 'arrow-down hide'}
@@ -118,7 +126,12 @@ export const Navbar = () => {
                   {servicesCategory.map((cat, idx) => (
                     <li className="nav-second-lvl_smallscreen" key={idx}>
                       <div className="flex-container">
-                        <Link to={`services/${cat.id}`}>{cat.heading}</Link>
+                        <Link
+                          to={`services/${cat.id}`}
+                          onClick={() => setToggleMenu(false)}
+                        >
+                          {cat.heading}
+                        </Link>
                         <FiChevronDown
                           className={
                             toggleSecondSubMenu === ''
@@ -151,6 +164,7 @@ export const Navbar = () => {
                               >
                                 <Link
                                   to={`${'services'}/${cat.id}/${service.id}`}
+                                  onClick={() => setToggleMenu(false)}
                                 >
                                   {service.heading}
                                 </Link>
@@ -164,15 +178,25 @@ export const Navbar = () => {
               )}
             </li>
             <li className="nav-first-lvl_smallscreen">
-              <Link to="/o-nama">O nama</Link>
+              <Link to="/o-nama" onClick={() => setToggleMenu(false)}>
+                O nama
+              </Link>
             </li>
             <li className="nav-first-lvl_smallscreen">
-              <Link to="/kontakt">Kontakt</Link>
+              <Link to="/kontakt" onClick={() => setToggleMenu(false)}>
+                Kontakt
+              </Link>
             </li>
           </ul>
-          <button type="button" className="nav-btn">
-            Termin
-          </button>
+          <Link to="/kontakt">
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={() => setToggleMenu(false)}
+            >
+              Termin
+            </button>
+          </Link>
         </div>
       </div>
     </div>

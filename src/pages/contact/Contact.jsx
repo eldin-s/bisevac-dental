@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import { CiLocationOn } from 'react-icons/ci';
 import { CiPhone } from 'react-icons/ci';
 import { CiMail } from 'react-icons/ci';
+import { useNavigate } from 'react-router-dom';
 
 export const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [link, setLink] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    fetch('https://formsubmit.co/ajax/932d5d263803e94697d4e251434241d3', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        Ime: name,
+        Email: email,
+        Telefon: number,
+        Poruka: message,
+        Link: link,
+      }),
+    });
+
+    navigate('/email-uspesan');
+  };
+
   return (
     <div className="contact-page">
       <h1 className="page-heading-main">Kontakt</h1>
@@ -42,7 +72,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <div className="contact-form-column">
+        <div className="contact-form-column" onSubmit={handleSubmit}>
           <form className="contact-form">
             {/* Honeypot */}
             <input type="text" name="_honey" style={{ display: 'none' }} />
@@ -54,42 +84,47 @@ export const Contact = () => {
               <input
                 type="text"
                 id="fullName"
-                name="Ime"
+                name="ime"
                 placeholder="Vaše Ime*"
                 required
+                onChange={(e) => setName(e.target.value)}
               />
 
               <input
                 type="text"
                 id="phoneNumber"
-                name="Broj Telefona"
+                name="number"
                 placeholder="Broj&nbsp;telefona"
+                onChange={(e) => setNumber(e.target.value)}
               />
             </div>
             <div className="form-fields">
               <input
                 type="email"
                 id="email"
-                name="E-mail"
+                name="email"
                 placeholder="E-mail*"
                 required
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="text"
                 id="link"
-                name="Link sajta"
+                name="link"
                 placeholder="Link&nbsp;sajt"
                 required
+                onChange={(e) => setLink(e.target.value)}
               />
             </div>
             <div className="form-bottom-fields">
               <textarea
-                name="Poruka"
+                name="message"
                 id="message"
                 cols="30"
                 rows="5"
                 placeholder="Vaša poruka"
                 required
+                onChange={(e) => setMessage(e.target.value)}
               />
               <input type="submit" value="Pošalji" />
             </div>
