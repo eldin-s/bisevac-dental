@@ -152,7 +152,7 @@
 }
 
 .inner-rect-bar::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 9px;
   height: 9px;
@@ -166,4 +166,35 @@
 
   background-color: #fff;
   border: 3px solid #4f87fb;
+}
+
+@media screen and (max-width: 1266px) {
+  .banner-element {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .about_us-container {
+    flex-direction: column;
+  }
+  .about_us-banner-container {
+    flex-wrap: wrap;
+    align-items: start;
+  }
+
+  .banner-element {
+    border: 0;
+  }
+
+  .about_us-steps-elements {
+    grid-template-columns: repeat(2, 1fr);
+    background-image: none !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .about_us-steps-elements {
+    grid-template-columns: 1fr;
+  }
 }

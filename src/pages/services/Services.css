@@ -20,6 +20,8 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
   gap: 1rem;
 }
 
@@ -39,7 +41,7 @@
 .effect2:after {
   z-index: -1;
   position: absolute;
-  content: '';
+  content: "";
   bottom: 15px;
   left: 10px;
   width: 50%;
@@ -63,4 +65,16 @@
   transform: rotate(3deg);
   right: 10px;
   left: auto;
+}
+
+@media screen and (max-width: 1170px) {
+  .services-categories-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .services-categories-container {
+    grid-template-columns: 1fr;
+  }
 }
