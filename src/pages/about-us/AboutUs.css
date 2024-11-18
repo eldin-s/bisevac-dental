@@ -7,6 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about_us-studio-description {
@@ -16,7 +19,7 @@
 }
 
 .about_us-studio-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
